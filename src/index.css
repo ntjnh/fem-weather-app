@@ -1,1 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import "tailwindcss";
+
+@theme {
+    /* Colours */
+    --color-neutral-900: hsl(243, 96%, 9%);
+    --color-neutral-800: hsl(243, 27%, 20%);
+    --color-neutral-700: hsl(243, 23%, 24%);
+    --color-neutral-600: hsl(243, 23%, 30%);
+    --color-neutral-300: hsl(240, 6%, 70%);
+    --color-neutral-200: hsl(250, 6%, 84%);
+    --color-orange-500: hsl(28, 100%, 52%);
+    --color-blue-500: hsl(233, 67%, 56%);
+    --color-blue-700: hsl(248, 70%, 36%);
+
+    /* Typography */
+    --font-dm-sans: "DM Sans", sans-serif;
+    --font-bricolage: "Bricolage Grotesque", sans-serif;
+}
+
+@layer base {
+    /* Typography */
+    .text-style-1 {
+        @apply font-dm-sans italic font-semibold text-8xl tracking-[-2px];
+    }
+
+    .text-style-2 {
+        @apply font-bricolage font-bold leading-[120%] text-[3.25rem] tracking-normal;
+    }
+
+    .text-style-3 {
+        @apply font-dm-sans font-light leading-none text-[2rem] tracking-normal;
+    }
+
+    .text-style-4 {
+        @apply font-dm-sans font-bold leading-[120%] text-[1.75rem] tracking-normal;
+    }
+
+    .text-style-5 {
+        @apply font-dm-sans font-semibold leading-[120%] text-xl tracking-normal;
+    }
+
+    .text-style-6 {
+        @apply font-dm-sans font-medium leading-[120%] text-lg tracking-normal;
+    }
+
+    .text-style-7 {
+        @apply font-dm-sans font-medium leading-[120%] text-base tracking-normal;
+    }
+
+    .text-style-8 {
+        @apply font-dm-sans font-medium leading-[120%] text-sm tracking-normal;
+    }
+}
