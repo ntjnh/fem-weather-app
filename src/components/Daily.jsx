@@ -9,10 +9,9 @@ export default function Daily({ data }) {
 
     return (
         <section className="col-span-2">
-            <h3 className="text-style-5">Daily forecast</h3>
+            <h3 className="mb-5 text-style-5">Daily forecast</h3>
 
-            <div className="gap-x-4 grid grid-cols-7">
-
+            <div className="daily">
                 {days.map((day, i) => 
                     (<Day
                         key={i}
@@ -20,12 +19,9 @@ export default function Daily({ data }) {
                         conditions={``}
                         max={maxes[i]}
                         min={mins[i]}
-                        
                     />)
                 )}
-
             </div>
-
         </section>
     )
 }

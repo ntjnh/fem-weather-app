@@ -11,7 +11,7 @@ export default function Header() {
                     </div>
 
                     <section>
-                        <button>Units</button>
+                        <button className="bg-neutral-800 px-4 py-3 rounded-lg text-style-7">Units</button>
 
                         <div className="hidden">
                             Switch to Imperial/Metric
