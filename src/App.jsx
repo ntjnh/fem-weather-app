@@ -31,7 +31,7 @@ function App() {
     if (Object.entries(weather).length) console.log(weather)
 
     return (
-        <>
+        <div className="bg-neutral-900 text-white">
             <Header />
             
             <main className="pb-16 pt-4">
@@ -55,7 +55,7 @@ function App() {
                     Built by <a className="underline" href="https://nate-dev.com" target="_blank" rel="noreferrer noopener">Nate</a>.
                 </div>
             </footer>
-        </>
+        </div>
     )
 }
 
