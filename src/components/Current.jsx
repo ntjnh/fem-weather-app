@@ -1,4 +1,9 @@
-export default function Current({ feelsLike, humidity, wind, precipitation }) {
+export default function Current({ data }) {
+    const feelsLike = Math.round(data.current.apparent_temperature)
+    const humidity = data.current.relative_humidity_2m
+    const wind = Math.round(data.current.wind_speed_10m)
+    const precipitation = data.current.precipitation
+
     return (
         <section className="col-span-2 grid grid-cols-4 gap-6">
             <div className="p-5">
