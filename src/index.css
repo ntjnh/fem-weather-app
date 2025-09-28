@@ -18,37 +18,81 @@
     --font-bricolage: "Bricolage Grotesque", sans-serif;
 }
 
+/* Typography */
+
+@utility text-style-1 {
+    @apply font-dm-sans italic font-semibold text-8xl tracking-[-2px];
+}
+
+@utility text-style-2 {
+    @apply font-bricolage font-bold leading-[120%] text-[3.25rem] tracking-normal;
+}
+
+@utility text-style-3 {
+    @apply font-dm-sans font-light leading-none text-[2rem] tracking-normal;
+}
+
+@utility text-style-4 {
+    @apply font-dm-sans font-bold leading-[120%] text-[1.75rem] tracking-normal;
+}
+
+@utility text-style-5 {
+    @apply font-dm-sans font-semibold leading-[120%] text-xl tracking-normal;
+}
+
+@utility text-style-5m {
+    @apply text-style-5 font-medium;
+}
+
+@utility text-style-6 {
+    @apply font-dm-sans font-medium leading-[120%] text-lg tracking-normal;
+}
+
+@utility text-style-7 {
+    @apply font-dm-sans font-medium leading-[120%] text-base tracking-normal;
+}
+
+@utility text-style-8 {
+    @apply font-dm-sans font-medium leading-[120%] text-sm tracking-normal;
+}
+
 @layer base {
-    /* Typography */
-    .text-style-1 {
-        @apply font-dm-sans italic font-semibold text-8xl tracking-[-2px];
+    .search-form {
+        @apply relative inline-block;
+
+        .icon-search {
+            @apply absolute h-full left-6 w-6 z-2;
+
+            &::before {
+                @apply absolute bg-center bg-no-repeat left-0 h-full w-full;
+                background-image: url('./assets/images/icon-search.svg');
+                content: '';
+            }
+        }
+
+        .input-text {
+            @apply bg-neutral-800 p-4 pl-[3.75rem] mr-2 rounded-xl text-style-5m w-[526px] placeholder:text-neutral-200;
+    
+            &:focus {
+                @apply inset-ring-3 inset-ring-neutral-900 outline-0 ring-2 ring-white;
+            }
+    
+            &:hover {
+                @apply bg-neutral-700;
+            }
+    
+        }
     }
 
-    .text-style-2 {
-        @apply font-bricolage font-bold leading-[120%] text-[3.25rem] tracking-normal;
-    }
+    .button-primary {
+        @apply bg-blue-500 ml-2 px-6 py-4 rounded-xl text-style-5m;
 
-    .text-style-3 {
-        @apply font-dm-sans font-light leading-none text-[2rem] tracking-normal;
-    }
-
-    .text-style-4 {
-        @apply font-dm-sans font-bold leading-[120%] text-[1.75rem] tracking-normal;
-    }
-
-    .text-style-5 {
-        @apply font-dm-sans font-semibold leading-[120%] text-xl tracking-normal;
-    }
-
-    .text-style-6 {
-        @apply font-dm-sans font-medium leading-[120%] text-lg tracking-normal;
-    }
-
-    .text-style-7 {
-        @apply font-dm-sans font-medium leading-[120%] text-base tracking-normal;
-    }
-
-    .text-style-8 {
-        @apply font-dm-sans font-medium leading-[120%] text-sm tracking-normal;
+        &:focus {
+            @apply inset-ring-3 inset-ring-neutral-900 outline-0 ring-2 ring-blue-500;
+        }
+    
+        &:hover {
+            @apply bg-blue-700;
+        }
     }
 }

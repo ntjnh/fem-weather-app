@@ -1,10 +1,21 @@
 export default function Search() {
     return (
-        <section className="text-center">
+        <section className="mb-12 text-center">
             <h1 className="mb-16 text-style-2">How's the sky looking today?</h1>
 
-            <input type="text" name="location" placeholder="Search for a place..." />
-            <button>Search</button>
+            <div className="search-form">
+                <span className="icon-search"></span>
+                <input
+                    className="input-text"
+                    type="text"
+                    name="location"
+                    placeholder="Search for a place..." />
+                <button
+                    className="button-primary"
+                >
+                    Search
+                </button>
+            </div>
 
             <ul className="hidden">
                 <li>City Name</li>
