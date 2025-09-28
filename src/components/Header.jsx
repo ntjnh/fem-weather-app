@@ -1,3 +1,5 @@
+import logo from '../assets/images/logo.svg'
+
 export default function Header() {
     return (
         <header className="py-12">
@@ -5,7 +7,7 @@ export default function Header() {
 
                 <div className="flex flex-nowrap justify-between">
                     <div>
-                        Weather Now
+                        <img src={logo} alt="Weather Now" className="h-10" />
                     </div>
 
                     <section>
