@@ -27,3 +27,17 @@ export default function convertDay(dayCode) {
 
     return day
 }
+
+export function convertTime(hourCode) {
+    let time = ''
+
+    if (hourCode == 0) {
+        time = `${hourCode + 12} AM`
+    } else if (hourCode >= 1 && hourCode < 12) {
+        time = `${hourCode} AM`
+    } else if (hourCode >= 12 && hourCode < 24) {
+        time = `${hourCode - 12} PM`
+    }
+
+    return time
+}

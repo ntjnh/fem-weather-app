@@ -9,7 +9,7 @@ export default function Weather({ data }) {
         
             <Location data={data} />
 
-            {/* <Hourly data={hourly} /> */}
+            <Hourly data={data} />
 
             <Current data={data} />
 
