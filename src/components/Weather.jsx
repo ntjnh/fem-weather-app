@@ -3,17 +3,17 @@ import Daily from './Daily'
 import Hourly from './Hourly'
 import Location from './Location'
 
-export default function Weather({ current, daily, hourly }) {
+export default function Weather({ data }) {
     return (
         <div className="gap-8 grid grid-flow-row grid-cols-3 auto-rows-3">
         
-            <Location data={current} />
+            <Location data={data} />
 
-            <Hourly data={hourly} />
+            {/* <Hourly data={hourly} /> */}
 
-            <Current data={current} />
+            <Current data={data} />
 
-            <Daily data={daily} />
+            <Daily data={data} />
 
         </div>
     )
