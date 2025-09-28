@@ -1,4 +1,4 @@
-import Current from './Current'
+import WeatherDetails from './WeatherDetails'
 import Daily from './Daily'
 import Hourly from './Hourly'
 import Location from './Location'
@@ -11,7 +11,7 @@ export default function Weather({ data }) {
 
             <Hourly data={data} />
 
-            <Current data={data} />
+            <WeatherDetails data={data} />
 
             <Daily data={data} />
 
